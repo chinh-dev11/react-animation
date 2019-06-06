@@ -10,12 +10,17 @@
     top: 30%;
     left: 25%;
     width: 50%;
+    transition: all 0.3s ease-out;
 }
 
 .ModalOpen {
-    display: block;
+    /* display: block; */ /* REM: display property can't be transitioned */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .ModalClosed {
-    display: none;
+    /* display: none; */ /* REM: display property can't be transitioned */
+    opacity: 0;
+    transform: translateY(-100%);
 }
