@@ -49,7 +49,7 @@ class App extends Component {
         <br />
         <Transition
           in={this.state.showBlock}
-          timeout={transitionDuration}
+          timeout={transitionDuration} // time between entering and exiting states
           mountOnEnter
           unmountOnExit>
           {transitionState => (

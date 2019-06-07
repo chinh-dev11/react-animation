@@ -17,14 +17,15 @@
   /* display: block; */ /* REM: display property can't be transitioned */
   /* opacity: 1;
   transform: translateY(0); */
-  animation: openModal 0.4s ease-out forwards;
+  animation: openModal 0.4s ease-out forwards; /* REM: time between entering and exiting states. Caution: be aware the difference timing between transition timeout (500) and the one in css file (animation: openModal 0.4s ease-out forwards), it could lead to unexpected behavior since the animation in css file is cut shorter */
 }
 
 .ModalClosed {
   /* display: none; */ /* REM: display property can't be transitioned */
   /* opacity: 0;
   transform: translateY(-100%); */
-  animation: closeModal 0.4s ease-out forwards;
+  /* animation: closeModal 0.4s ease-out forwards; */ /* REM: time between entering and exiting states. Caution: be aware the difference timing between transition timeout (500) and the one in css file (animation: openModal 0.4s ease-out forwards), it could lead to unexpected behavior since the animation in css file is cut shorter */
+  animation: closeModal 1s ease-out forwards;
 }
 
 @keyframes openModal {
