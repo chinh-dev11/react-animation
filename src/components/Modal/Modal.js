@@ -17,7 +17,18 @@ const modal = (props) => {
             mountOnEnter
             unmountOnExit
             // classes from css file, to be added on different transition states
-            classNames="fade-slide">
+            // classNames="fade-slide"
+            // customizing css className, instead of using fade-slide classes as above
+            classNames={{
+                enter: '',
+                enterActive: 'ModalOpen',
+                exit: '',
+                exitActive: 'ModalClosed'
+                // the 2 following states to be used on elements that are unconditionally added to the DOM (as with h1 and button below) to animate when they appear in the DOM/on the page
+                // appear:
+                // appearActive
+            }}
+        >
             <div className="Modal">
                 <h1>A Modal</h1>
                 <button className="Button" onClick={props.closed}>Dismiss</button>
