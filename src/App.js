@@ -52,12 +52,12 @@ class App extends Component {
           timeout={transitionDuration} // time between entering and exiting states
           mountOnEnter
           unmountOnExit
-          onEnter={() => console.log('onEnter')}
+          /* onEnter={() => console.log('onEnter')}
           onEntering={() => console.log('onEntering')}
           onEntered={() => console.log('onEntered')}
           onExit={() => console.log('onExit')}
           onExiting={() => console.log('onExiting')}
-          onExited={() => console.log('onExited')}
+          onExited={() => console.log('onExited')} */
           >
           {transitionState => (
             <div

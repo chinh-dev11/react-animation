@@ -28,6 +28,19 @@
   animation: closeModal 1s ease-out forwards;
 }
 
+.fade-slide-enter { /* can be used for initialization since it will be removed after 1 frame of enter state */
+  
+}
+.fade-slide-enter-active {
+  animation: openModal 0.4s ease-out forwards;
+}
+.fade-slide-exit { /* can be used for initialization since it will be removed after 1 frame of exit state */
+
+}
+.fade-slide-exit-active {
+  animation: closeModal 1s ease-out forwards;
+}
+
 @keyframes openModal {
   0% {
     opacity: 0;
