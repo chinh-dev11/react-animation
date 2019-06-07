@@ -33,7 +33,7 @@ class App extends Component {
       exited: { opacity: 0 },
     };
     const transitionDefaultStyle = {
-      transition: `opacity: ${transitionDuration}ms ease-out-in`,
+      transition: `opacity ${transitionDuration}ms ease-in-out`,
       opacity: 0
     };
     return (
@@ -59,10 +59,10 @@ class App extends Component {
                 width: 100,
                 height: 100,
                 margin: "auto",
-                transition: "opacity 1s ease-out",
-                opacity: transitionState === "exiting" ? 0 : 1
-                // ...transitionDefaultStyle,
-                // ...transitionStyles[transitionState]
+                // transition: "opacity 1s ease-out",
+                // opacity: transitionState === "exiting" ? 0 : 1
+                ...transitionDefaultStyle,
+                ...transitionStyles[transitionState]
               }}
               >{transitionState}
             </div>
